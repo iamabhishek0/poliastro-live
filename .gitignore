@@ -1,0 +1,10 @@
+*.swp
+*.~
+*.py[co]
+__pycache__/
+.idea/
+nohup.out
+.gcloudignore
+cloud_sql_proxy
+.vscode/
+.fuse_hidden*
