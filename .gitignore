@@ -8,3 +8,4 @@ nohup.out
 cloud_sql_proxy
 .vscode/
 .fuse_hidden*
+venv

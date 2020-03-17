@@ -89,8 +89,8 @@ if os.getenv('GAE_APPLICATION', None):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '/cloudsql/sympy-live-pr:asia-south1:sympy',
-            'NAME': 'sympyDB',
+            'HOST': '/cloudsql/poliastro-service:asia-south1:poliastro',
+            'NAME': 'poliastro',
             'USER': 'root',
             'PASSWORD': 'n4ez4y2Fou2tMcqe',
         }
@@ -107,7 +107,7 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1', # DB's IP address
             'PORT': '3306',
-            'NAME': 'sympyDB',
+            'NAME': 'poliastro',
             'USER': 'root',
             'PASSWORD': 'n4ez4y2Fou2tMcqe',
         }
@@ -150,9 +150,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = '/static/'
-STATIC_URL = '/static-58/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static-58"), ]
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 
 # django-cors-headers
 # CORS_ORIGIN_WHITELIST = []
